@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+@layer base {
+     :root {
+        --background: 0 0% 0%;
+        --accent-mint: 166 100% 50%;
+        color-scheme: dark;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        background-color: black;
+        color: white;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+     ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('/noise.svg');
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+}

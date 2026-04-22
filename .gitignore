@@ -20,6 +20,9 @@
 # production
 /build
 
+# Testing
+/coverage
+
 # misc
 .DS_Store
 *.pem
@@ -31,7 +34,18 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
+.env*.local
 .env*
+
+# Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# Configuración de editores
+.vscode/
+.idea/
+*.swp
+*.swo
 
 # vercel
 .vercel
@@ -39,3 +53,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
