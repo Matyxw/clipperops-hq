@@ -1,56 +1,45 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# Testing
-/coverage
-
-# misc
-.DS_Store
+# --- [ 1. SEGURIDAD CRÍTICA ] ---
+# Nunca, bajo ninguna circunstancia, subas tus llaves del reino.
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 *.pem
+*.key
 
-# debug
+# --- [ 2. BASE DE DATOS Y PERSISTENCIA ] ---
+# No subas tu base de datos local. El esquema se sube, el contenido NO.
+# Si subís el .db, estás subiendo los nombres de tus clientes reales a la nube.
+*.db
+*.sqlite3
+*.db-journal
+
+# --- [ 3. EL "SÓTANO" DE NEXT.JS / NODE ] ---
+node_modules/
+.next/
+out/
+build/
+.turbo/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*.local
-.env*
+# --- [ 4. EL "RUIDO" DE PYTHON ] ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+ENV/
+.pytest_cache/
+.coverage
+.ipynb_checkpoints/
 
-# Archivos del Sistema Operativo
+# --- [ 5. BASURA DE SISTEMA OPERATIVO ] ---
+# Para que cuando un pibe use Mac o Linux no vea tus archivos de Windows.
 .DS_Store
 Thumbs.db
-
-# Configuración de editores
+desktop.ini
 .vscode/
 .idea/
-*.swp
-*.swo
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
