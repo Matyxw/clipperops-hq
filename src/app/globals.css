@@ -31,3 +31,15 @@ body::before {
     pointer-events: none;
     z-index: 0;
 }
+
+
+/* ── Animación del scroll indicator ── */
+
+@keyframes co-scroll-line {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(300%);
+    }
+}
